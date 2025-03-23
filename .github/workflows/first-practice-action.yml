@@ -1,2 +1,8 @@
 name: First practice workflow
-on: workflow_dispatch
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run the lint
+        run: npm run lint
